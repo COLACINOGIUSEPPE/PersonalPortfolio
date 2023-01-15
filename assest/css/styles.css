@@ -1,0 +1,886 @@
+* {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  text-decoration: none;
+  outline: none;
+  border: none;
+  -webkit-transform: all .2s linear;
+          transform: all .2s linear;
+}
+
+html {
+  font-size: 63%;
+  scroll-behavior: smooth;
+  scroll-padding-top: 5rem;
+  overflow-x: hidden;
+}
+
+html::-webkit-scrollbar {
+  width: 1rem;
+}
+
+html::-webkit-scrollbar-track {
+  background: #000;
+}
+
+html::-webkit-scrollbar-thumb {
+  background: #05FCB2;
+}
+
+body {
+  background: #000;
+}
+
+section {
+  padding: 5rem 9%;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 1rem 7%;
+  z-index: 10000;
+  background: #000;
+}
+
+.header .logo {
+  font-weight: bolder;
+  color: #fff;
+  font-size: 3.5rem;
+}
+
+.header .logo span {
+  color: #05FCB2;
+}
+
+.header .navbar a {
+  display: inline-block;
+  padding: 1rem 1.5rem;
+  font-size: 2.5rem;
+  border-radius: 2px;
+  color: #fff;
+}
+
+.header .navbar a:hover {
+  color: #05FCB2;
+  border: 2px solid yellow;
+}
+
+#menu-btn {
+  font-size: 3rem;
+  color: #fff;
+  cursor: pointer;
+  display: none;
+}
+
+.home {
+  height: 100vh;
+  padding: 0;
+  margin-top: 6rem;
+}
+
+.home .image-home {
+  min-height: 40vh;
+  background-size: contain !important;
+  background-position: center !important;
+  padding: 50rem 8%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.home .image-home .content {
+  width: 50rem;
+  margin-top: -300px;
+}
+
+.home .image-home .content span {
+  font-size: 5rem;
+  color: #05FCB2;
+  display: block;
+}
+
+.home .image-home .content h3 {
+  font-size: 7rem;
+  color: #fff;
+  padding: 1rem 0;
+}
+
+.home .image-home .content button {
+  font-size: 2.5rem;
+  margin: 7px;
+  padding: 7px;
+  background: #000;
+  border-radius: 2px;
+  cursor: pointer;
+  border: 2px solid yellow;
+}
+
+.home .image-home .content button a {
+  color: #05FCB2;
+}
+
+.home .image-home .content #projects-button:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.home .image-home .content #get-in-touch-button:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.about-me {
+  background-color: #fff;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.about-me h1 {
+  color: #000;
+  text-align: center;
+  font-size: 5rem;
+  border: 2px solid #05FCB2;
+  margin-top: 30px;
+}
+
+.about-me #image-about-me {
+  padding-top: 75px;
+}
+
+.about-me img {
+  width: 450px;
+  float: left;
+  margin: 30px;
+  margin-top: -5px;
+}
+
+.about-me p {
+  color: #000;
+  font-size: 2.4rem;
+}
+
+.skills {
+  height: 140vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: #000;
+}
+
+.skills h1 {
+  color: #fff;
+  text-align: center;
+  font-size: 5rem;
+  border: 2px solid #05FCB2;
+  margin-top: 30px;
+}
+
+.skills h3 {
+  padding: 120px;
+}
+
+.skills #soft-skills {
+  color: #fff;
+  font-size: 3.5rem;
+  padding-top: 30px;
+  text-align: center;
+}
+
+.skills .soft-skills-icons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  margin: -100px;
+  padding-left: 70px;
+}
+
+.skills .icon-name {
+  padding: 50px;
+}
+
+.skills .icon-name h5 {
+  color: #fff;
+  font-size: 2rem;
+  text-align: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding-top: 20px;
+  padding-right: 45px;
+}
+
+.skills #hard-skills {
+  color: #fff;
+  font-size: 3.5rem;
+  text-align: center;
+}
+
+.skills .hard-skills-icons {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  margin: -100px;
+  padding-left: 70px;
+}
+
+.skills .hard-skills-icons h5 {
+  padding-right: 65px;
+}
+
+.projects {
+  height: 100vh;
+  background-color: #fff;
+}
+
+.projects #projects {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.projects h1 {
+  color: #000;
+  font-size: 5rem;
+  border: 2px solid #05FCB2;
+  border-width: 50%;
+  margin-top: 30px;
+  width: 100%;
+  text-align: center;
+}
+
+.projects .projects-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-top: 100px;
+}
+
+.projects img {
+  border: 2px solid #000;
+  width: 400px;
+}
+
+.projects img:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.projects h5 {
+  font-size: 3rem;
+  margin-top: 10px;
+}
+
+.projects p {
+  font-size: 2rem;
+}
+
+.projects #added-text {
+  color: #000;
+  font-size: 3rem;
+  text-align: center;
+  padding: 75px;
+  margin: 100px;
+}
+
+.get-in-touch {
+  height: 140vh;
+  background-color: #000;
+}
+
+.get-in-touch h1 {
+  color: #fff;
+  text-align: center;
+  font-size: 5rem;
+  border: 2px solid #05FCB2;
+  margin-top: 40px;
+}
+
+.get-in-touch form {
+  margin: 50px;
+  padding: 7rem;
+  border-radius: 3px;
+  -webkit-box-shadow: 0 3px 10px #05FCB2;
+          box-shadow: 0 3px 10px #05FCB2;
+}
+
+.get-in-touch label {
+  line-height: 5rem;
+  font-size: 2.5rem;
+  color: #05FCB2;
+}
+
+.get-in-touch textarea {
+  min-height: 6rem;
+  padding-left: 10px;
+}
+
+.get-in-touch .input-field {
+  width: 100%;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 5px;
+  border-radius: 2px;
+  border: none;
+  border: 3px outset #05FCB2;
+  font-size: 2rem;
+  outline: none;
+}
+
+.get-in-touch .input-field::-webkit-input-placeholder {
+  padding: 0.5rem;
+  color: #000;
+}
+
+.get-in-touch .input-field:-ms-input-placeholder {
+  padding: 0.5rem;
+  color: #000;
+}
+
+.get-in-touch .input-field::-ms-input-placeholder {
+  padding: 0.5rem;
+  color: #000;
+}
+
+.get-in-touch .input-field::placeholder {
+  padding: 0.5rem;
+  color: #000;
+}
+
+.get-in-touch .submit-btn {
+  width: 30%;
+  padding: 10px;
+  margin: 40px 320px;
+  background-color: #000;
+  color: #fff;
+  border: 2px solid #05FCB2;
+  border-radius: 3px;
+  font-size: 2rem;
+}
+
+.get-in-touch .submit-btn:hover {
+  background-color: #000;
+  color: #05FCB2;
+  border: 2px solid yellow;
+  cursor: pointer;
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.footer {
+  width: 90%;
+  margin: 10px;
+  margin-left: 65px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 20px;
+  background-color: #000;
+}
+
+.footer .social-icons {
+  margin: 5px;
+}
+
+.footer i {
+  color: #fff;
+  font-size: 2.5rem;
+  padding: 5px;
+}
+
+.footer i:hover {
+  color: #05FCB2;
+  border-radius: 3px;
+  border: 2px solid yellow;
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+}
+
+.footer .copyrights {
+  font-size: 2rem;
+  margin-left: 10px;
+  color: #fff;
+}
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  html {
+    font-size: 55%;
+  }
+  .header {
+    position: fixed;
+  }
+  .header .navbar {
+    position: absolute;
+    top: 99%;
+    left: 0;
+    right: 0;
+    background: #000;
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+            clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+  }
+  .header .navbar.active {
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  }
+  .header .navbar a {
+    display: block;
+    text-align: center;
+  }
+  .header .logo {
+    font-size: 3.3rem;
+  }
+  .header .navbar a {
+    padding: 1rem 1.3rem;
+    font-size: 2.5rem;
+    margin-left: 25px;
+  }
+  #menu-btn {
+    display: block;
+  }
+  .home {
+    padding: 0;
+    margin-top: 6rem;
+  }
+  .home .image-home {
+    width: 115%;
+  }
+  .home .image-home .content {
+    width: 30rem;
+  }
+  .home .image-home .content span {
+    font-size: 4.5rem;
+  }
+  .home .image-home .content h3 {
+    font-size: 5rem;
+  }
+  .home .image-home .content button {
+    font-size: 2.3rem;
+    margin: 6px;
+    padding: 6px;
+  }
+  .about-me {
+    height: 160vh;
+  }
+  .about-me h1 {
+    font-size: 4rem;
+  }
+  .about-me #image-about-me {
+    padding-top: 30px;
+  }
+  .about-me img {
+    width: 380px;
+    margin-top: 20px;
+    margin-left: 135px;
+  }
+  .about-me p {
+    font-size: 2.2rem;
+    text-align: center;
+    float: left;
+    margin-top: 20px;
+  }
+  .skills {
+    height: 210vh;
+  }
+  .skills h1 {
+    font-size: 4rem;
+    width: 58%;
+    margin-left: 210px;
+  }
+  .skills h3 {
+    padding-bottom: 25px;
+    padding-left: 70px;
+  }
+  .skills #soft-skills {
+    color: #fff;
+    font-size: 3rem;
+    padding-top: 20px;
+    margin-left: 50px;
+  }
+  .skills .soft-skills-icons {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 2fr 2fr 2fr;
+        grid-template-columns: 2fr 2fr 2fr;
+    margin: 0 auto;
+    padding-left: 130px;
+  }
+  .skills .icon-name {
+    padding: 30px;
+  }
+  .skills .icon-name h5 {
+    font-size: 2rem;
+    padding-top: 15px;
+    padding-right: 130px;
+  }
+  .skills #hard-skills {
+    color: #fff;
+    font-size: 3rem;
+    text-align: center;
+    padding: 50px;
+  }
+  .skills .hard-skills-icons {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 2fr 2fr 2fr;
+        grid-template-columns: 2fr 2fr 2fr;
+    margin: 0 auto;
+    padding-left: 130px;
+  }
+  .skills .hard-skills-icons h5 {
+    padding-right: 150px;
+  }
+  .projects h1 {
+    font-size: 4rem;
+  }
+  .projects .projects-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin-top: 100px;
+  }
+  .projects img {
+    border: 2px solid #000;
+    width: 400px;
+  }
+  .projects h5 {
+    margin-top: 15px;
+  }
+  .projects p {
+    font-size: 2rem;
+    padding-top: 10px;
+  }
+  .projects #added-text {
+    margin: 40px;
+  }
+  .get-in-touch h1 {
+    font-size: 4rem;
+  }
+  .get-in-touch .submit-btn {
+    width: 40%;
+    margin: 15px 130px;
+  }
+  .footer {
+    margin-left: 35px;
+  }
+}
+
+@media screen and (min-width: 300px) and (max-width: 768px) {
+  html {
+    font-size: 43%;
+  }
+  .header .navbar {
+    position: absolute;
+    top: 99%;
+    left: 0;
+    right: 0;
+    background: #000;
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+            clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+  }
+  .header .navbar.active {
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  }
+  .header .navbar a {
+    display: block;
+    text-align: center;
+  }
+  .header .logo {
+    font-size: 3.3rem;
+  }
+  .header .navbar a {
+    padding: 1rem 1rem;
+    font-size: 2.2rem;
+    margin-left: 3px;
+  }
+  #menu-btn {
+    display: block;
+  }
+  .home {
+    padding: 0;
+    margin-top: 0;
+    height: 100vh;
+  }
+  .home .image-home {
+    width: 110%;
+  }
+  .home .image-home .content {
+    width: 27rem;
+  }
+  .home .image-home .content span {
+    font-size: 4rem;
+    margin-top: 110px;
+    margin-left: -15px;
+    margin-right: 35px;
+  }
+  .home .image-home .content h3 {
+    font-size: 4rem;
+    margin-left: -15px;
+  }
+  .home .image-home .content button {
+    font-size: 2rem;
+    margin: 25px;
+    margin-top: 5px;
+    padding: 5px;
+    margin-left: -20px;
+  }
+  .about-me {
+    height: 110vh;
+    padding-left: 30px;
+  }
+  .about-me h1 {
+    font-size: 3rem;
+  }
+  .about-me #image-about-me {
+    padding-top: 30px;
+  }
+  .about-me img {
+    width: 220px;
+    margin-top: 5px;
+    margin-left: 65px;
+  }
+  .about-me p {
+    font-size: 1.9rem;
+    text-align: center;
+    float: left;
+    margin-top: 30px;
+  }
+  .skills {
+    height: 390vh;
+  }
+  .skills h1 {
+    font-size: 3rem;
+    width: 38%;
+    margin-left: 270px;
+  }
+  .skills h3 {
+    padding-bottom: 25px;
+    padding-left: 70px;
+  }
+  .skills #soft-skills {
+    color: #fff;
+    font-size: 2.5rem;
+    padding-top: 20px;
+    margin-left: 50px;
+  }
+  .skills .soft-skills-icons {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[1];
+        grid-template-columns: repeat(1, 1fr);
+    margin: 0 auto;
+    padding-left: 350px;
+  }
+  .skills .icon-name {
+    padding: 30px;
+  }
+  .skills .icon-name h5 {
+    font-size: 1.8rem;
+    padding-top: 15px;
+    padding-right: 340px;
+  }
+  .skills #hard-skills {
+    color: #fff;
+    font-size: 2.5rem;
+    text-align: center;
+    padding: 50px;
+  }
+  .skills .hard-skills-icons {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[1];
+        grid-template-columns: repeat(1, 1fr);
+    margin: 0 auto;
+    padding-left: 360px;
+  }
+  .skills .hard-skills-icons h5 {
+    padding-right: 370px;
+  }
+  .projects {
+    height: 80vh;
+    background-color: #fff;
+  }
+  .projects #projects {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .projects h1 {
+    font-size: 3rem;
+  }
+  .projects .projects-container {
+    margin-top: 70px;
+  }
+  .projects img {
+    width: 230px;
+  }
+  .projects h5 {
+    font-size: 2.3rem;
+    margin-top: 20px;
+  }
+  .projects p {
+    font-size: 1.8rem;
+  }
+  .projects #added-text {
+    font-size: 2rem;
+    padding: 20px;
+    margin: 35px;
+  }
+  .get-in-touch {
+    height: 120vh;
+  }
+  .get-in-touch h1 {
+    font-size: 3rem;
+  }
+  .get-in-touch form {
+    margin: 10px;
+    margin-top: 30px;
+    padding: 5rem;
+  }
+  .get-in-touch label {
+    font-size: 2rem;
+  }
+  .get-in-touch textarea {
+    padding-left: 10px;
+  }
+  .get-in-touch .input-field {
+    font-size: 1.8rem;
+  }
+  .get-in-touch .submit-btn {
+    width: 35%;
+    padding: 8px;
+    margin: 20px 70px;
+    font-size: 1.8rem;
+    border-radius: 3px;
+  }
+  .footer {
+    width: 90%;
+    margin-left: 65px;
+    display: inline;
+    padding: 20px;
+  }
+  .footer .social-icons {
+    margin: 10px;
+  }
+  .footer i {
+    font-size: 2rem;
+    padding: 10px;
+  }
+  .footer i:hover {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+  }
+  .footer .copyrights {
+    font-size: 2.2rem;
+  }
+}
+
+@media screen and (min-width: 300px) and (max-width: 768px) and (orientation: landscape) {
+  .home {
+    height: 170vh;
+  }
+  .home .image-home {
+    width: 100%;
+  }
+  .about-me {
+    height: 200vh;
+    padding-left: 60px;
+  }
+  .about-me img {
+    margin-left: 210px;
+  }
+  .skills {
+    height: 520vh;
+  }
+  .skills h1 {
+    margin-left: 430px;
+  }
+  .skills .soft-skills-icons {
+    -ms-grid-columns: (2fr)[2];
+        grid-template-columns: repeat(2, 2fr);
+    margin: 65px;
+  }
+  .skills #hard-skills {
+    color: #fff;
+    font-size: 2.5rem;
+    text-align: center;
+    padding: 50px;
+  }
+  .skills .hard-skills-icons {
+    -ms-grid-columns: (2fr)[2];
+        grid-template-columns: repeat(2, 2fr);
+  }
+  .projects {
+    height: 130vh;
+  }
+  .get-in-touch {
+    height: 210vh;
+  }
+  .get-in-touch .submit-btn {
+    margin: 20px 170px;
+  }
+  .footer .copyrights {
+    font-size: 1.9rem;
+  }
+}
+/*# sourceMappingURL=styles.css.map */

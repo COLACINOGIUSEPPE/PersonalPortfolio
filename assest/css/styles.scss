@@ -1,0 +1,958 @@
+*{ font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    outline: none;
+    border: none;
+    transform: all .2s linear;
+}
+
+$light-green : #05FCB2;
+$black: #000;
+$white: #fff;
+
+
+html {
+    font-size: 63%;
+    scroll-behavior:smooth;
+    scroll-padding-top: 5rem;
+    overflow-x: hidden;
+
+    &::-webkit-scrollbar{
+        width: 1rem;
+    }
+
+    &::-webkit-scrollbar-track{
+        background: $black;
+    }
+
+    &::-webkit-scrollbar-thumb{
+        background: $light-green;
+    }
+}
+
+body{
+    background: $black;
+}
+
+section{
+    padding: 5rem 9%;
+}  
+
+.header{
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    display: flex;
+    align-items:center;
+    justify-content: space-between;
+    padding: 1rem 7%;
+    z-index: 10000;
+    background: $black;
+
+    .logo{
+        font-weight: bolder;
+        color: $white;
+        font-size: 3.5rem;
+
+        span{
+            color: $light-green;
+        }
+    }
+
+    .navbar a{
+        display: inline-block;
+        padding: 1rem 1.5rem;
+        font-size: 2.5rem;
+        border-radius: 2px;
+        color: $white;
+
+        &:hover{
+            color:$light-green;
+            border: 2px solid yellow;
+        }
+    }
+}
+
+#menu-btn{
+    font-size: 3rem;
+    color: $white;
+    cursor: pointer;
+    display: none;
+}
+
+// Home section starts here 
+.home{
+    height: 100vh;
+    padding: 0;
+    margin-top: 6rem;
+
+    .image-home{
+        min-height: 40vh;
+        background-size: contain !important;
+        background-position: center !important;
+        padding: 50rem 8%;
+        display: flex;
+        align-items: center;
+
+        .content{
+            width: 50rem;
+            margin-top: -300px;
+
+            span{
+                font-size: 5rem;
+                color: $light-green;
+                display: block;
+        
+            }
+
+            h3{
+                font-size: 7rem;
+                color: $white;
+                padding: 1rem 0;
+            }
+
+            button {
+                font-size: 2.5rem;
+                margin: 7px;
+                padding: 7px;
+                background: $black;
+                border-radius: 2px;
+                cursor: pointer;
+                border: 2px solid yellow;
+
+                a {
+                    color: $light-green;
+                }
+            }
+
+            #projects-button:hover {
+                    transform: scale(1.1);
+                }
+            
+
+            #get-in-touch-button:hover {
+                transform: scale(1.1);
+            }
+        }
+    }
+}
+// Home section ends here
+
+//About me section starts here 
+.about-me {
+    background-color: $white;
+    height: 100vh;
+    display: flex;
+
+    h1 {
+      color: $black;
+      text-align: center;
+      font-size: 5rem;
+      border: 2px solid $light-green;
+      margin-top: 30px;
+    }
+
+    #image-about-me{
+        padding-top: 75px;
+    }
+
+    img {
+        width: 450px;
+        float: left;
+        margin: 30px;
+        margin-top: -5px;
+    }
+
+    p {
+        color: $black;
+        font-size: 2.4rem;
+    }
+}
+// About me section ends here
+
+// Skills section starts here
+.skills {
+    height: 140vh;
+    display: flex;
+    justify-content: center;
+    background-color: $black;
+
+    h1 {
+        color: $white;
+        text-align: center;
+        font-size: 5rem;
+        border: 2px solid $light-green;
+        margin-top: 30px;
+    }
+
+    h3 {
+        padding: 120px;
+    }
+
+    #soft-skills {
+        color: $white;
+        font-size: 3.5rem;
+        padding-top: 30px;
+        text-align: center;
+    }
+
+    .soft-skills-icons{
+        display: flex;
+        flex-direction: row;
+        margin: -100px;
+        padding-left: 70px;
+    }
+
+    .icon-name {
+        padding: 50px;
+ 
+        h5 {
+            color: $white;
+            font-size: 2rem;
+            text-align: center;
+            justify-content: center;
+            padding-top: 20px;
+            padding-right: 45px;
+        }
+    }
+
+
+    #hard-skills {
+        color: $white;
+        font-size: 3.5rem;
+        text-align: center;
+    }
+
+    .hard-skills-icons {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+        margin: -100px;
+        padding-left: 70px;
+
+        h5 {
+            padding-right: 65px;
+        }
+    }
+}
+// Skills section ends here
+
+// Projects Section starts here
+.projects {
+    height: 100vh;
+    background-color: $white;
+    
+
+    #projects{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    h1 {
+    color: $black;
+    font-size: 5rem;
+    border: 2px solid $light-green;
+    border-width: 50%;
+    margin-top: 30px;
+    width: 100%;
+    text-align: center;
+    }
+
+    .projects-container {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        margin-top: 100px;
+    }
+
+    img {
+        border: 2px solid $black;
+        width: 400px;
+    }
+
+    img:hover {
+        transform: scale(1.1);
+    }
+
+    h5 {
+        font-size: 3rem;
+        margin-top: 10px;
+    }
+
+    p {
+        font-size: 2rem;
+    }
+
+    #added-text {
+        color: $black;
+        font-size: 3rem;
+        text-align:  center;
+        padding: 75px;
+        margin: 100px;
+    }
+}    
+// Projects Section ends here
+
+// Get in Touch Section starts here
+.get-in-touch {
+    height: 140vh;
+    background-color: $black;
+
+    h1 {
+        color: $white;
+        text-align: center;
+        font-size: 5rem;
+        border: 2px solid $light-green;
+        margin-top: 40px;
+    }
+
+    form {
+        margin: 50px;
+        padding: 7rem;
+        border-radius: 3px;
+        box-shadow: 0 3px 10px $light-green;
+    }
+
+    
+    label {
+        line-height: 5rem;
+        font-size: 2.5rem;
+        color: $light-green;
+    }
+
+    textarea {
+        min-height: 6rem;
+        padding-left: 10px;
+    }
+
+    .input-field {
+        width: 100%;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        padding-left: 5px;
+        border-radius: 2px;
+        border: none;
+        border: 3px outset $light-green;
+        font-size: 2rem;
+        outline: none;
+    }
+
+    .input-field::placeholder {
+        padding: 0.5rem;
+        color: $black;
+    }
+
+    .submit-btn {
+        width: 30%;
+        padding: 10px;
+        margin: 40px 320px;
+        background-color: $black;
+        color: $white;
+        border: 2px solid $light-green;
+        border-radius: 3px;
+        font-size: 2rem;
+        }
+
+    .submit-btn:hover {
+        background-color: $black;
+        color: $light-green;
+        border: 2px solid yellow;
+        cursor: pointer;
+        transform: scale(1.1);
+    }
+}
+// Get in Touch Section ends here
+
+// Footer Section starts here
+.footer{
+    width: 90%;
+    margin: 10px;
+    margin-left: 65px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    padding: 20px;
+    background-color: $black;
+    
+    .social-icons {
+        margin: 5px;
+    }
+
+    i {
+        color: $white;
+        font-size: 2.5rem;
+        padding: 5px;
+    }
+
+    i:hover {
+        color: $light-green;
+        border-radius: 3px;
+        border: 2px solid yellow;
+        transform: scale(1.2);
+    }
+
+    .copyrights {
+        font-size: 2rem;
+        margin-left: 10px;
+        color: $white;
+    }
+}
+// Footer Section ends here
+
+// Media queries Tablet
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+    html {
+        font-size: 55%;
+    }
+    // Media query Navbar starts
+    .header{
+        position: fixed;
+
+        .navbar {
+            position: absolute;
+            top: 99%; left: 0; right: 0;
+            background: $black;
+            clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+
+            &.active{
+               clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%); 
+            }
+        
+
+           a {
+                display: block;
+                text-align: center;
+            }
+        }
+    
+        .logo{
+            font-size: 3.3rem;
+        }
+    
+        .navbar a{
+            padding: 1rem 1.3rem;
+            font-size: 2.5rem;
+            margin-left: 25px;
+        }
+    }
+
+    #menu-btn {
+        display: block;
+    }
+    // Media query Navbar ends
+
+    // Media query Home section starts  
+    .home{
+        padding: 0;
+        margin-top: 6rem;
+    
+        .image-home{
+            width: 115%;
+        
+            .content{
+                width: 30rem;
+
+                span{
+                   font-size: 4.5rem;
+                }
+
+                h3{
+                 font-size: 5rem;
+                }
+
+                button {
+                  font-size: 2.3rem;
+                  margin: 6px;
+                  padding: 6px;
+                }
+            }
+        }
+    }
+    // Media query Home section ends
+
+    // Media query About Me section starts
+    .about-me {
+        height: 160vh;
+    
+        h1 {
+          font-size: 4rem;
+        }
+    
+        #image-about-me{
+            padding-top: 30px;
+        }
+    
+        img {
+            width: 380px;
+            margin-top: 20px;
+            margin-left: 135px;
+        }
+    
+        p {
+            font-size: 2.2rem;
+            text-align: center;
+            float: left;
+            margin-top: 20px;
+        }
+    }
+    // Media query About Me section ends
+
+    // Media query Skills starts here
+    .skills {
+        height: 210vh;
+    
+        h1 {
+            font-size: 4rem;
+            width: 58%;
+            margin-left: 210px;
+        }
+    
+        h3 {
+            padding-bottom: 25px;
+            padding-left: 70px;
+        }
+    
+        #soft-skills {
+            color: $white;
+            font-size: 3rem;
+            padding-top: 20px;
+            margin-left: 50px;
+        }
+    
+        .soft-skills-icons{
+            display: grid;
+            grid-template-columns: 2fr 2fr 2fr;
+            margin: 0 auto;
+            padding-left: 130px;
+        }
+    
+        .icon-name {
+            padding: 30px;
+     
+            h5 {
+                font-size: 2rem;
+                padding-top: 15px;
+                padding-right: 130px;
+            }
+        }
+    
+    
+        #hard-skills {
+            color: $white;
+            font-size: 3rem;
+            text-align: center;
+            padding: 50px;
+        }
+
+        .hard-skills-icons {
+            display: grid;
+            grid-template-columns: 2fr 2fr 2fr;
+            margin: 0 auto;
+            padding-left: 130px;
+    
+            h5 {
+                padding-right: 150px;
+            }
+        }
+    }
+    // Media query Skills ends here
+
+    // Media query Project section starts
+    .projects {
+    
+        h1 {
+        font-size: 4rem;
+        }
+    
+        .projects-container {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            margin-top: 100px;
+        }
+    
+        img {
+            border: 2px solid $black;
+            width: 400px;
+        }
+    
+        h5 {
+            margin-top: 15px;
+        }
+    
+        p {
+            font-size: 2rem;
+            padding-top: 10px;
+        }
+    
+        #added-text {
+            margin: 40px;
+        }
+    }    
+    // Media query Project section ends
+
+    // Media query Get In touch section starts
+    .get-in-touch {
+
+        h1 {
+            font-size: 4rem;
+        }
+    
+        .submit-btn {
+          width: 40%;
+          margin: 15px 130px;
+        }
+    }
+    // Media query Get In touch section ends
+
+    // Media query Footer section starts
+    .footer{
+        margin-left: 35px;
+    }
+}
+
+    // Media queries Mobile
+
+@media screen and (min-width: 300px) and (max-width:768px) {
+    html {
+        font-size: 43%;
+    }
+    // Media query Mobile Navbar starts
+    .header{
+
+        .navbar {
+            position: absolute;
+            top: 99%; left: 0; right: 0;
+            background: $black;
+            clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+
+            &.active{
+               clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%); 
+            }
+        
+
+           a {
+                display: block;
+                text-align: center;
+            }
+        }
+    
+        .logo{
+            font-size: 3.3rem;
+        }
+    
+        .navbar a{
+            padding: 1rem 1rem;
+            font-size: 2.2rem;
+            margin-left: 3px;
+        }
+    }
+
+    #menu-btn {
+        display: block;
+    }
+    // Media query Mobile Navbar ends
+
+    // Media query Mobile Home section starts  
+    .home{
+        padding: 0;
+        margin-top: 0;
+        height: 100vh;
+    
+        .image-home{
+            width: 110%;
+        
+            .content{
+                width: 27rem;
+
+                span{
+                   font-size: 4rem;
+                   margin-top: 110px;
+                   margin-left: -15px;
+                   margin-right: 35px;
+                }
+
+                h3{
+                 font-size: 4rem;
+                 margin-left: -15px;
+                }
+
+                button {
+                  font-size: 2rem;
+                  margin: 25px;
+                  margin-top: 5px;
+                  padding: 5px;
+                  margin-left: -20px;
+                }
+            }
+        }
+    }
+    // Media query Mobile Home section ends
+
+    // Media query Mobile About me Section starts
+    .about-me {
+        height: 110vh;
+        padding-left: 30px;
+    
+        h1 {
+          font-size: 3rem;
+        }
+    
+        #image-about-me{
+            padding-top: 30px;
+        }
+    
+        img {
+            width: 220px;
+            margin-top: 5px;
+            margin-left: 65px;
+        }
+    
+        p {
+            font-size: 1.9rem;
+            text-align: center;
+            float: left;
+            margin-top: 30px;
+        }
+    }
+    // Media query Mobile About me Section ends
+
+    // Media query Mobile Skills Section starts
+    .skills {
+        height: 390vh;
+    
+        h1 {
+            font-size: 3rem;
+            width: 38%;
+            margin-left: 270px;
+        }
+    
+        h3 {
+            padding-bottom: 25px;
+            padding-left: 70px;
+        }
+    
+        #soft-skills {
+            color: $white;
+            font-size: 2.5rem;
+            padding-top: 20px;
+            margin-left: 50px;
+        }
+    
+        .soft-skills-icons{
+            display: grid;
+            grid-template-columns:repeat(1,1fr);
+            margin: 0 auto;
+            padding-left: 350px;
+        }
+    
+        .icon-name {
+            padding: 30px;
+     
+            h5 {
+                font-size: 1.8rem;
+                padding-top: 15px;
+                padding-right: 340px;
+            }
+        }
+    
+    
+        #hard-skills {
+            color: $white;
+            font-size: 2.5rem;
+            text-align: center;
+            padding: 50px;
+        }
+
+        .hard-skills-icons {
+            display: grid;
+            grid-template-columns: repeat(1,1fr);
+            margin: 0 auto;
+            padding-left: 360px;
+    
+            h5 {
+                padding-right: 370px;
+            }
+        }
+    }
+    // Media query Mobile Skills Section ends
+
+    // Media query Mobile Projects Section starts
+    .projects {
+        height: 80vh;
+        background-color: $white;
+        
+    
+        #projects{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    
+        h1 {
+        font-size: 3rem;
+        }
+    
+        .projects-container {
+            margin-top: 70px;
+        }
+    
+        img {
+            width: 230px;
+        }
+    
+        h5 {
+            font-size: 2.3rem;
+            margin-top: 20px;
+        }
+    
+        p {
+            font-size: 1.8rem;
+        }
+    
+        #added-text {
+            font-size: 2rem;
+            padding: 20px;
+            margin: 35px;
+        }
+    }
+    // Media query Mobile Pojects Section ends
+
+    // Media query Mobile Contact Form strats
+    .get-in-touch {
+        height: 120vh;
+    
+        h1 {
+            font-size: 3rem;
+        }
+    
+        form {
+            margin: 10px;
+            margin-top: 30px;
+            padding: 5rem;
+        }
+    
+    
+        label {
+            font-size: 2rem;
+        }
+    
+        textarea {
+            padding-left: 10px;
+        }
+    
+        .input-field {
+            font-size: 1.8rem;
+        }
+    
+        .submit-btn {
+            width: 35%;
+            padding: 8px;
+            margin: 20px 70px;
+            font-size: 1.8rem;
+            border-radius: 3px;
+        }
+    }
+    // Media query Mobile Contact Form ends
+
+    // Media query mobile Footer starts
+    .footer{
+        width: 90%;
+        margin-left: 65px;
+        display: inline;
+        padding: 20px;
+        
+        
+        .social-icons {
+            margin: 10px;
+        }
+    
+        i {
+            font-size: 2rem;
+            padding: 10px;
+        }
+    
+        i:hover {
+            transform: scale(1.1);
+        }
+    
+        .copyrights {
+            font-size: 2.2rem;
+        }
+    }
+    // Media queries mobile Footer ends
+}
+
+    // Media queries mobile landscape
+@media screen and (min-width: 300px) and (max-width:768px) and (orientation: landscape) {
+    
+    .home {
+        height: 170vh;
+
+        .image-home{
+            width: 100%;
+        }
+
+    }
+
+
+    .about-me {
+        height: 200vh;
+        padding-left: 60px;
+    
+        img {
+            margin-left: 210px;
+        }
+    }
+
+
+    .skills {
+        height: 520vh;
+    
+        h1 {
+            margin-left: 430px;
+        }
+    
+        .soft-skills-icons{
+            grid-template-columns:repeat(2,2fr);
+            margin: 65px;
+        }
+    
+    
+        #hard-skills {
+            color: $white;
+            font-size: 2.5rem;
+            text-align: center;
+            padding: 50px;
+        }
+
+        .hard-skills-icons {
+            grid-template-columns: repeat(2,2fr);
+        }
+    }
+
+    
+    .projects {
+        height: 130vh;
+    }
+
+
+    .get-in-touch {
+        height: 210vh;
+
+        .submit-btn {
+            margin: 20px 170px;
+        }
+    }
+
+
+    .footer{
+
+        .copyrights {
+            font-size: 1.9rem;
+        }
+    }
+}
